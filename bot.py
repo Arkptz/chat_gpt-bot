@@ -27,7 +27,7 @@ async def start(message):
 async def handle_text(message):
   # Получаем текст сообщения
   text = message.text
-  response = openai.Completion.create(
+  response = await openai.Completion.acreate(
   engine="text-davinci-003",
   prompt=text,
   max_tokens=1024,
